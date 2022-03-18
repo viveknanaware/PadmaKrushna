@@ -21,7 +21,12 @@
             "aot": true,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "_redirects",
+                "input": "src",
+                "output": "/"
+              }
             ],
             "styles": [
               "src/styles.css"
@@ -116,6 +121,14 @@
             "production": {
               "devServerTarget": "PadmaKrushnaSystems:serve:production"
             }
+          }
+        },
+        "deploy": {
+          "builder": "@netlify-builder/deploy:deploy",
+          "options": {
+            "outputPath": "dist/PadmaKrushnaSystems",
+            "netlifyToken": "Op7bzoy_CxOBJ18L549Vo_Ws1HJwGbWEluLaQkCXXhY",
+            "siteId": "e1d5f183-f4c1-4646-8411-d132f2fa2738"
           }
         }
       }
