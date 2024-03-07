@@ -11,6 +11,8 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
 console.log("Vivek");
+
+console.log("Vivek");
   }
 
 }
